@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_1e3c72"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/fl_seach_left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="64px"
+                android:layout_marginBottom="@dimen/value_20_px"
+                android:layout_marginLeft="@dimen/value_24_px"
+                android:layout_marginTop="@dimen/value_20_px"
+                android:background="@drawable/search_edittext_shape">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/value_18_px"
+                    android:layout_marginLeft="@dimen/value_18_px"
+                    android:layout_marginRight="@dimen/value_18_px"
+                    android:layout_marginTop="@dimen/value_18_px"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/search_stock_search" />
+
+                <EditText
+                    android:id="@+id/et_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:hint="请输入..."
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:textColor="@color/funt_black_1"
+                    android:textSize="@dimen/value_30_px" />
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/iv_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginBottom="@dimen/value_18_px"
+                android:layout_marginRight="@dimen/value_24_px"
+                android:layout_marginTop="@dimen/value_18_px"
+                android:visibility="gone"
+                android:src="@mipmap/search_stock_delete" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/value_20_px"
+            android:layout_marginRight="@dimen/value_24_px"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:text="取消"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/value_30_px" />
+    </LinearLayout>
+
+    <!--FK，看UI上左边搜索图标给的边距不一样，才这么多嵌套，完事发现，，FK了-->
+</LinearLayout>
